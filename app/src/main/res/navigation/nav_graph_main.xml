@@ -19,8 +19,11 @@
         android:name="gt.uvg.pokelist.view.DetailFragment"
         android:label="DetailFragment"
         tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
         <argument
-            android:name="pokemonId"
+            android:name="id"
             app:argType="integer" />
     </fragment>
 </navigation>
