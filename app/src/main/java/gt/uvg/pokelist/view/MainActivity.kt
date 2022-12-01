@@ -1,6 +1,7 @@
 package gt.uvg.pokelist.view
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -10,6 +11,7 @@ import gt.uvg.pokelist.R
 import gt.uvg.pokelist.databinding.ActivityMainBinding
 import gt.uvg.pokelist.model.Pokemon
 import gt.uvg.pokelist.repository.PokemonRepository
+import org.w3c.dom.Text
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         navController= navHostFragment.navController
         setupActionBarWithNavController(navController)
+
 
     }
 

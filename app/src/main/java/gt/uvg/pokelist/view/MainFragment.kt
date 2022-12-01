@@ -15,6 +15,8 @@ import gt.uvg.pokelist.repository.PokemonRepository
 
 class MainFragment: Fragment() {
 
+    val pokemonList = PokemonRepository().getPokemonList()
+
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
@@ -30,9 +32,7 @@ class MainFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val pokemonList = PokemonRepository().getPokemonList()
-        val recyclerView =view.findViewById<RecyclerView>(R.id.recyclerView)
+        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(view.context)
         recyclerView.adapter = PokemonListAdapter(pokemonList)
 
